@@ -77,42 +77,6 @@ end
 @enduml
 ```
 
-## Complex Flow with Groups
-
-```plantuml
-@startuml
-!theme cerulean
-
-participant Browser
-participant "Load Balancer" as LB
-participant "App Server" as App
-participant Cache
-participant Database
-
-group Health Check
-    LB -> App: Ping
-    App --> LB: Pong
-end
-
-group User Request
-    Browser -> LB: GET /api/users/123
-    LB -> App: Forward request
-    
-    App -> Cache: Check cache
-    alt Cache hit
-        Cache --> App: Cached data
-    else Cache miss
-        App -> Database: SELECT user
-        Database --> App: User data
-        App -> Cache: Store in cache
-    end
-    
-    App --> LB: Response
-    LB --> Browser: User data
-end
-@enduml
-```
-
 ## Tips for Sequence Diagrams
 
 1. **Use meaningful names**: Instead of `A`, `B`, use `Client`, `Server`

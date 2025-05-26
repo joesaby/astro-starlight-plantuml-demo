@@ -36,35 +36,6 @@ stop
 @enduml
 ```
 
-## Order Processing Workflow
-
-```plantuml
-@startuml
-start
-:Customer places order;
-
-if (Payment authorized?) then (yes)
-  :Process payment;
-  :Update inventory;
-  
-  fork
-    :Send confirmation email;
-  fork again
-    :Generate invoice;
-  fork again
-    :Notify warehouse;
-  end fork
-  
-  :Order completed;
-else (no)
-  :Cancel order;
-  :Send failure notification;
-endif
-
-stop
-@enduml
-```
-
 ## Complex Business Process
 
 ```plantuml

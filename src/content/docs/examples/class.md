@@ -20,38 +20,6 @@ class User {
 @enduml
 ```
 
-## Inheritance Example
-
-```plantuml
-@startuml
-abstract class Animal {
-  #String name
-  #int age
-  +makeSound()
-  +eat()
-  +sleep()
-}
-
-class Dog extends Animal {
-  -String breed
-  +bark()
-  +wagTail()
-}
-
-class Cat extends Animal {
-  -String furColor
-  +meow()
-  +purr()
-}
-
-class Bird extends Animal {
-  -double wingspan
-  +fly()
-  +chirp()
-}
-@enduml
-```
-
 ## E-commerce System
 
 ```plantuml
