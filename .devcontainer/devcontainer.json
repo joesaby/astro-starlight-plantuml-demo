@@ -1,0 +1,13 @@
+{
+    "name": "Astro Dev Container",
+    "image": "node:23-slim",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "astro-build.astro-vscode",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "postCreateCommand": "npm install"
+}
