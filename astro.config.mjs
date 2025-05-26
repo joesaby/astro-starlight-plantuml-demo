@@ -30,7 +30,18 @@ export default defineConfig({
         },
       ],
     }),
-    plantuml(),
+    plantuml({
+      // Enable caching to store generated diagrams
+      cache: true,
+      // Configure retry logic
+      retry: {
+        maxAttempts: 3,
+        initialDelay: 1000, // 1 second
+        maxDelay: 5000, // 5 seconds
+      },
+      // Optional: Use a different PlantUML server if needed
+      // server: 'https://your-plantuml-server.com',
+    }),
   ],
   site: 'https://astro-plantuml.netlify.app'
 });
