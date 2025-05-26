@@ -1,0 +1,64 @@
+---
+title: Welcome to Astro PlantUML
+description: Automatically convert PlantUML code blocks to beautiful diagrams in your Astro site
+template: splash
+hero:
+  tagline: Transform PlantUML code blocks into diagrams automatically in your markdown files
+  actions:
+    - text: Get Started
+      link: /installation/
+      icon: right-arrow
+      variant: primary
+    - text: View Examples
+      link: /examples/
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Features
+
+<CardGrid stagger>
+  <Card title="Automatic Conversion" icon="pencil">
+    Automatically converts PlantUML code blocks in markdown files to images during build time.
+  </Card>
+  <Card title="Multiple Diagram Types" icon="seti:notebook">
+    Supports sequence, class, activity, state, component diagrams, mind maps, and Gantt charts.
+  </Card>
+  <Card title="Customizable" icon="setting">
+    Configure server URL, timeout, CSS classes, and more to fit your needs.
+  </Card>
+  <Card title="Error Handling" icon="warning">
+    Graceful error handling with fallback to show the original code if rendering fails.
+  </Card>
+</CardGrid>
+
+## Quick Example
+
+Write PlantUML in your markdown:
+
+````markdown
+```plantuml
+@startuml
+Alice -> Bob: Hello!
+Bob --> Alice: Hi there!
+@enduml
+```
+````
+
+And it automatically renders as:
+
+```plantuml
+@startuml
+Alice -> Bob: Hello!
+Bob --> Alice: Hi there!
+@enduml
+```
+
+## Why Astro PlantUML?
+
+- **📝 Write Once**: Keep your diagrams as code in version control
+- **🚀 Fast Builds**: Diagrams are rendered at build time, not runtime
+- **🎨 Themeable**: Use PlantUML themes to match your site's design
+- **🔧 Flexible**: Use the public server or host your own
+- **✨ Simple**: Just write PlantUML code blocks - no manual exports needed
