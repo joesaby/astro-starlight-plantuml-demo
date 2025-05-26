@@ -23,9 +23,9 @@ export default defineConfig({
           label: 'Examples',
           items: [
             { label: 'All Diagrams', link: '/examples/' },
-            { label: 'Sequence Diagrams', link: '/examples/sequence/' },
-            { label: 'Class Diagrams', link: '/examples/class/' },
-            { label: 'Activity Diagrams', link: '/examples/activity/' },
+            { label: 'Sequence Diagrams', link: '/examples/sequence' },
+            { label: 'Class Diagrams', link: '/examples/class' },
+            { label: 'Activity Diagrams', link: '/examples/activity' },
           ],
         },
       ],
