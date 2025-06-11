@@ -8,7 +8,7 @@ export default defineConfig({
       title: 'Astro PlantUML',
       description: 'Documentation and examples for the astro-plantuml integration',
       social: {
-        github: 'https://github.com/yourusername/astro-plantuml',
+        github: 'https://github.com/joesaby/astro-plantuml',
       },
       sidebar: [
         {
